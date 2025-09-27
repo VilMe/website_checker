@@ -23,4 +23,9 @@ def get_user_agent() -> str:
     return ua.chrome
 
 
-print(get_user_agent())
+def get_status_description(status_code: int) -> str:
+    for value in HTTPStatus:
+        if value == status_code:
+            description: str = f'({value.name}) {value.description}'
+            return description
+    return '(???) Unknown status code...'
