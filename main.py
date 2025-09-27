@@ -20,7 +20,7 @@ def get_website(csv_path: str) -> list[str]:
 
 def get_user_agent() -> str:
     ua = UserAgent()
-    return ua.firefox
+    return ua.chrome
 
 
 print(get_user_agent())
