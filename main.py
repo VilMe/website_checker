@@ -16,3 +16,6 @@ def get_website(csv_path: str) -> list[str]:
                 websites.append(row[1])
 
         return websites
+    
+
+print(get_website('websites.csv'))
