@@ -18,4 +18,9 @@ def get_website(csv_path: str) -> list[str]:
         return websites
     
 
-print(get_website('websites.csv'))
+def get_user_agent() -> str:
+    ua = UserAgent()
+    return ua.firefox
+
+
+print(get_user_agent())
