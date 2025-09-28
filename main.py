@@ -45,3 +45,6 @@ def main():
 
     for site in sites:
         check_website(site, user_agent)
+
+if __name__ == '__main__':
+    main()
