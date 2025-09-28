@@ -34,3 +34,7 @@ def get_status_description(status_code: int) -> str:
 def check_website(website: str, user_agent):
     try:
         code:int = requests.get(website, headers={'User-Agent': user_agent}).status_code
+        print(website, get_status_description(code))
+    except Exception:
+        print(f'**Could not get information for website: "{website}"')
+
