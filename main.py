@@ -38,3 +38,10 @@ def check_website(website: str, user_agent):
     except Exception:
         print(f'**Could not get information for website: "{website}"')
 
+
+def main():
+    sites: list[str] = get_website('websites.csv')
+    user_agent: str = get_user_agent()
+
+    for site in sites:
+        check_website(site, user_agent)
