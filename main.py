@@ -29,3 +29,8 @@ def get_status_description(status_code: int) -> str:
             description: str = f'({value.name}) {value.description}'
             return description
     return '(???) Unknown status code...'
+
+
+def check_website(website: str, user_agent):
+    try:
+        code:int = requests.get(website, headers={'User-Agent': user_agent}).status_code
